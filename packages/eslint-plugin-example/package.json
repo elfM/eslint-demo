@@ -1,0 +1,18 @@
+{
+  "name": "eslint-plugin-example",
+  "version": "1.0.0",
+  "description": "本地自定义 ESLint 插件示例",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "custom-rules"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  }
+}
+
