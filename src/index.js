@@ -1,9 +1,18 @@
+
+// function count() {
+//     const a = 30;
+//     for (let i = 0; i < 10; i++) {
+//         a += i;
+//     }
+// }
+
 /**
  * 解析 URL query 字符串为对象格式
  * @param {string} queryString - URL query 字符串，例如 "?name=张三&age=25&city=北京"
  * @returns {Object} 解析后的对象
  */
 function parseQueryString(queryString) {
+
     // 如果输入为空或不是字符串，返回空对象
     if (!queryString || typeof queryString !== 'string') {
         console.error('queryString is not a string');
@@ -89,6 +98,28 @@ console.log('示例 4:', parseQueryString(query4));
 console.log('示例 5 - 空字符串:', parseQueryString(''));
 console.log('示例 5 - null:', parseQueryString(null));
 console.log('示例 5 - undefined:', parseQueryString(undefined));
+
+// ========== 违反 example/no-magic-numbers 规则的示例 ==========
+// 以下代码会触发 no-magic-numbers 规则警告
+
+// 示例 1: 使用魔法数字作为超时时间
+function fetchDataWithTimeout() {
+    const timeout = 5000; // 魔法数字：5000 不在忽略列表中
+    return timeout;
+}
+
+// 注意：以下数字不会触发警告（在忽略列表中：0, 1, -1）
+const zero = 0; // 不会触发警告（在 ignore 列表中）
+const hundred = 100; // 会触发警告（100 不在 ignore 列表中，推荐配置只忽略 0, 1, -1）
+
+// 示例使用let声明的常量
+function testLet() {
+    let a = 10;
+
+    return a;
+}
+
+testLet();
 
 // 导出函数供其他模块使用
 if (typeof module !== 'undefined' && module.exports) {

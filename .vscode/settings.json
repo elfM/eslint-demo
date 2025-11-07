@@ -10,11 +10,6 @@
     "typescriptreact"
   ],
 
-  // 保存时自动修复
-  //   "editor.codeActionsOnSave": {
-  //     "source.fixAll.eslint": "explicit"
-  //   },
-
   // 显示 ESLint 的诊断信息
   "eslint.probe": [
     "javascript",
@@ -23,9 +18,26 @@
     "typescriptreact"
   ],
 
-  // 使用 ESLint 作为格式化工具
-  //   "eslint.format.enable": true,
-
   // 显示 ESLint 状态栏
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+
+  // 使用 ESLint 作为格式化工具
+  "eslint.format.enable": true,
+
+  // 保存时自动修复（可选，取消注释以启用）
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": "explicit"
+  // },
+
+  // 编辑器设置 - 显示错误和警告
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never"
+  },
+
+  // 诊断设置 - 确保错误显示
+  "problems.showCurrentInStatus": true,
+
+  // 确保 ESLint 使用工作区配置
+  "eslint.useESLintClass": true,
+  "eslint.experimental.useFlatConfig": true
 }
